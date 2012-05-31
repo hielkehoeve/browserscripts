@@ -12,16 +12,22 @@ function pad(n)
 {
     return n < 10 ? '0' + n : n 
 }
+
+function getLocalTime(date) {
+    var localOffset = date.getTimezoneOffset() * (60*1000);
+    var localTime = date.getTime();
+    return new Date(localTime - localOffset);  
+}
   
 $('.commit-group time').each(function()
 {
-    var date = new Date($(this).attr('datetime'));
+    var date = getLocalTime(new Date($(this).attr('datetime')));
     $(this).text(pad(date.getUTCHours())+":"+pad(date.getUTCMinutes()));
 });
   
 $('.tree-browser time, .full-commit time, .commit-tease time, .file-history-tease time').each(function()
 {
-    var date = new Date($(this).attr('datetime'));
+    var date = getLocalTime(new Date($(this).attr('datetime')));
     $(this).text(date.getUTCDate()+"-"+date.getUTCMonth()+"-"+date.getUTCFullYear()+" "+pad(date.getUTCHours())+":"+pad(date.getUTCMinutes()));
 });
 
