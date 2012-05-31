@@ -1,4 +1,4 @@
 browserscripts
 ==============
 
-Scripts for GreaseMonkey or TanperMonkey
+Scripts for GreaseMonkey or TamperMonkey
