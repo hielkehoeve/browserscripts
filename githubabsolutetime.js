@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       GitHub absolute time
 // @namespace  nl.topicus
-// @version    0.3.1
+// @version    0.3.2
 // @description  renders the absolute time instead of the relative time
 // @match      https://github.com/*
 // @copyright  2012+, Hielke Hoeve
