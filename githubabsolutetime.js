@@ -19,7 +19,7 @@ $('.commit-group time').each(function()
     $(this).text(pad(date.getUTCHours())+":"+pad(date.getUTCMinutes()));
 });
   
-$('.tree-browser time, .full-commit time, .commit-tease time').each(function()
+$('.tree-browser time, .full-commit time, .commit-tease time, .file-history-tease time').each(function()
 {
     var date = new Date($(this).attr('datetime'));
     $(this).text(date.getUTCDate()+"-"+date.getUTCMonth()+"-"+date.getUTCFullYear()+" "+pad(date.getUTCHours())+":"+pad(date.getUTCMinutes()));
