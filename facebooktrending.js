@@ -14,11 +14,15 @@ function FacebookTrendingRemover()
     
     $('.storyInnerContent.storyContent').each(function()
     { 
-        console.log('item gevonden: '+$(this).find('.passiveName').text()); 
-        $(this).css('display', 'none'); 
+        if($(this).find('.passiveName') !== null)
+        {
+            console.log('item gevonden: '+$(this).find('.passiveName').text()); 
+            $(this).css('display', 'none'); 
+        }
     });
     
     setTimeout(FacebookTrendingRemover, 30000);
 }
 
 setTimeout(FacebookTrendingRemover, 10000);
+
